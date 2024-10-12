@@ -1,0 +1,25 @@
+{
+    "targetDefaults": {
+        "namedInputs": {
+            "default": [
+                "{projectRoot}/**/*"
+            ],
+            "prod": [
+                "!{projectRoot}/**/*.spec.tsx"
+            ]
+        },
+        "build": {
+            "inputs": [
+                "prod",
+                "^prod"
+            ]
+        },
+        "test": {
+            "inputs": [
+                "default",
+                "^prod",
+                "{workspaceRoot}/jest.config.ts"
+            ]
+        }
+    }
+}
