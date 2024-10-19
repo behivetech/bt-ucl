@@ -1,0 +1,21 @@
+{
+    "codingStandards": {
+        "indentation": "spaces",
+        "indentationSize": 4,
+        "maxLineLength": 120,
+        "namingConventions": {
+            "variables": "camelCase",
+            "functions": "camelCase",
+            "classes": "PascalCase",
+            "classNames": "camelCase"
+        }
+    },
+    "fileStructure": {
+        "srcFolder": "src",
+        "testFolder": "tests"
+    },
+    "dependencies": {
+        "node": ">=23.0.0",
+        "npm": ">=10.9.0"
+    }
+}

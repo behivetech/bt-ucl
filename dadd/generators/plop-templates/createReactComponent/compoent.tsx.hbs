@@ -1,0 +1,19 @@
+import React from 'react';
+import styles from './{{kebabCase name}}.module.scss';
+
+export type {{pascalCase name}}Props = {
+    /**
+     * Adds a className to the root element for additional styling from the parent
+     */
+    className?: string;
+};
+
+export const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = ({
+    className,
+}) => {
+    return (
+        <div className={styles.container}>{{
+            pascalCase name}} component
+        </div>
+    );
+};
