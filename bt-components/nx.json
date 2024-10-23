@@ -9,9 +9,15 @@
             ]
         },
         "build": {
+            "dependsOn": [
+                "^build"
+            ],
             "inputs": [
                 "prod",
                 "^prod"
+            ],
+            "outputs": [
+                "{workspaceRoot}/dist/parent"
             ]
         },
         "test": {

@@ -1,0 +1,26 @@
+{
+  "name": "test-package",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Bruce Smith <jbsmith@smithcasa.net>",
+  "homepage": "https://github.com/behivetech/bt-ucl#readme",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behivetech/bt-ucl.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/test-package.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/behivetech/bt-ucl/issues"
+  }
+}
