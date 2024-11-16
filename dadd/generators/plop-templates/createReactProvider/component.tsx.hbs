@@ -1,0 +1,66 @@
+import React, {useState} from 'react';
+
+export interface {{pascalCaseWithProvider name}}Props {
+    /**
+     * Children of the component
+     */
+    children: React.ReactNode;
+};
+
+export interface {{pascalCaseNoProvider name}}State {
+    /**
+     * Add the state values here
+     */
+    stateValue: string;
+}
+
+export interface {{pascalCaseNoProvider name}}Context extends {{pascalCase name}}State {
+    /**
+     * Add the context values here
+     */
+    contextValue: string;
+    /**
+     * Function to update the state
+     */
+    update{{pascalCaseNoProvider name}}State: (newState: {{pascalCaseNoProvider name}}State) => void;
+}
+
+const DEFAULT_STATE: {{pascalCaseNoProvider name}}State = {
+    stateValue: 'default state value',
+};
+
+const DEFAULT_CONTEXT: {{pascalCaseNoProvider name}}Context = {
+    ...DEFAULT_STATE,
+    contextValue: 'default context value',
+    update{{pascalCaseNoProvider name}}State: () => null,
+};
+
+const {{pascalCaseNoProvider name}}Context = React.createContext<{{pascalCaseNoProvider name}}Context>(DEFAULT_CONTEXT);
+
+export const use{{pascalCaseNoProvider name}}Context = (): {{pascalCaseNoProvider name}}Context => useContext({{pascalCaseNoProvider
+name}}Context);
+
+export const {{pascalCaseWithProvider name}}: React.FC<{{pascalCaseWithProvider name}}Props> = ({
+    children,
+    }) => {
+    const [{stateValue}, setState] = useState<{{pascalCase name}}State>(DEFAULT_STATE);
+
+    const updateState = (newState) => {
+        setState((prevState) => ({
+            ...prevState,
+            ...newState,
+        }));
+    };
+    
+    const values = {
+        contextValue: 'context value',
+        stateValue,
+        update{{pascalCaseNoProvider name}}State: (newState) => updateState(newState),
+    }
+
+    return (
+        <{{pascalCaseNoProvider name}}Context.Provider value={values}>
+            {children}
+        </{{pascalCaseNoProvider name}}Context.Provider>
+    );
+};
