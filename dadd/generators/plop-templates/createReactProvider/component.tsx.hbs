@@ -42,7 +42,7 @@ name}}Context);
 
 export const {{pascalCaseWithProvider name}}: React.FC<{{pascalCaseWithProvider name}}Props> = ({
     children,
-    }) => {
+    }: {{pascalCaseWithProvider name}}Props) => {
     const [{stateValue}, setState] = useState<{{pascalCase name}}State>(DEFAULT_STATE);
 
     const updateState = (newState) => {
@@ -51,7 +51,7 @@ export const {{pascalCaseWithProvider name}}: React.FC<{{pascalCaseWithProvider 
             ...newState,
         }));
     };
-    
+
     const values = {
         contextValue: 'context value',
         stateValue,

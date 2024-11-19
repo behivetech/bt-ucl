@@ -10,28 +10,33 @@ export const createReactProvider = {
     actions: [
         {
             type: 'add',
-            path: '{{cwd}}/{{kebabCaseWithProvider name}}/{{kebabCaseWithProvider name}}.tsx',
+            path: '{{cwd}}/{{kebabCaseWithProvider name}}/src/{{kebabCaseWithProvider name}}.tsx',
             templateFile: 'generators/plop-templates/createReactProvider/component.tsx.hbs'
         },
         {
             type: 'add',
-            path: '{{cwd}}/{{kebabCaseWithProvider name}}/{{kebabCaseWithProvider name}}.docs.mdx',
-            templateFile: 'generators/plop-templates/createReactProvider/docs.mdx.hbs'
+            path: '{{cwd}}/{{kebabCase name}}/README.md',
+            templateFile: 'generators/plop-templates/createReactProvider/README.md.hbs'
         },
         {
             type: 'add',
-            path: '{{cwd}}/{{kebabCaseWithProvider name}}/{{kebabCaseWithProvider name}}.specs.tsx',
+            path: '{{cwd}}/{{kebabCaseWithProvider name}}/src/{{kebabCaseWithProvider name}}.specs.tsx',
             templateFile: 'generators/plop-templates/createReactProvider/specs.tsx.hbs'
         },
         {
             type: 'add',
-            path: '{{cwd}}/{{kebabCaseWithProvider name}}/{{kebabCaseWithProvider name}}.composition.tsx',
+            path: '{{cwd}}/{{kebabCaseWithProvider name}}/src/{{kebabCaseWithProvider name}}.composition.tsx',
             templateFile: 'generators/plop-templates/createReactProvider/composition.tsx.hbs'
         },
         {
             type: 'add',
             path: '{{cwd}}/{{kebabCaseWithProvider name}}/index.ts',
             templateFile: 'generators/plop-templates/createReactProvider/index.ts.hbs'
+        },
+        {
+            type: 'add',
+            path: '{{cwd}}/{{kebabCaseWithProvider name}}/package.json',
+            templateFile: 'generators/plop-templates/createReactComponent/package.json.hbs'
         }
     ]
 };

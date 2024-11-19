@@ -1,0 +1,9 @@
+{
+  "name": "bt-components-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/bt-components-e2e/src",
+  "implicitDependencies": ["bt-components"],
+  "// targets": "to see all targets run: nx show project bt-components-e2e --web",
+  "targets": {}
+}

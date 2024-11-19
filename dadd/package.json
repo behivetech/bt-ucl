@@ -1,6 +1,11 @@
 {
     "name": "dadd",
     "version": "1.0.0",
+    "description": "Repo, nodeJS and component generator for npm packages amonge other things",
+    "author": "BEhive Tech",
+    "license": "ISC",
+    "main": "./index.mjs",
+    "scripts": {},
     "devDependencies": {
         "cross-env": "^7.0.3",
         "eslint": "^8.57.1",
@@ -19,7 +24,6 @@
         "lodash": "^4.17.21"
     },
     "type": "module",
-    "scripts": {},
     "bin": {
         "dadd": "./index.mjs"
     }

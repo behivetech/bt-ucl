@@ -1,0 +1,36 @@
+{
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
