@@ -1,0 +1,41 @@
+{
+  "name": "bt-generator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tools/bt-generator/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tools/bt-generator",
+        "main": "tools/bt-generator/src/index.ts",
+        "tsConfig": "tools/bt-generator/tsconfig.lib.json",
+        "assets": [
+          "tools/bt-generator/*.md",
+          {
+            "input": "./tools/bt-generator/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./tools/bt-generator/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./tools/bt-generator",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./tools/bt-generator",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

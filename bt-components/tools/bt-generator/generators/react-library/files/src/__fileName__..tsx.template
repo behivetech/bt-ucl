@@ -1,0 +1,23 @@
+import React from 'react'
+import styles from './<%= fileName %>.module.scss';
+
+export interface <%= className %>Props {
+    /**
+     * Add a className to the root element from the parent component
+     */
+    className ?: string;
+}
+
+export const <%= className %>: React.FC<<%= className %>Props> = ({
+  className,
+}: <%= className %>Props) => {
+  // Your component implementation here
+  return (
+    <div className={className}>
+      {/* Component content */}
+    </div>
+  );
+};
+
+
+export default Mytest;

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@bt-components/bt-generator": ["tools/bt-generator/src/index.ts"],
       "@bt-components/mylib": ["packages/mylib/src/index.ts"]
     }
   },

@@ -1,0 +1,4 @@
+.<%=propertyName %> {
+    // Add your styles here. The display param is not neecessary. It's only there as an example.
+    display: block;
+}
